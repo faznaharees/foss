@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title CET SCE Placement Info
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    nav.site-header.sticky-top.py-1
+      .container.d-flex.flex-column.flex-md-row.justify-content-between
+        a.py-2(href='/')
+            title Placement Info
+            hr.n
+            hr.n
+            hr.n
+        
+        a.py-2.d-none.d-md-inline-block(href='/') Home
+        a.py-2.d-none.d-md-inline-block(href='/articles/add') Add Company
+        a.py-2.d-none.d-md-inline-block(href='/users/register') Register
+        a.py-2.d-none.d-md-inline-block(href='/users/login') Login
+        a.py-2.d-none.d-md-inline-block(href='#') About
+
+    .container
+      != messages('message', locals)
+      if errors
+        each error, i in errors
+            div(class="alert alert-danger") #{error.msg}
+      block content
+      br
+      hr
+      footer
+        p Copyright &copy; 2020
+    script(src='/bower_components/jquery/dist/jquery.js')  
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')  
+    script(src='/js/main.js')  
+    img(src=imgpath)

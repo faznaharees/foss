@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST',action='/articles/add')
+    #form-group
+      label Company Name:
+      input.form-control(name='title',type='text')
+    #form-group
+      label Company ID:
+      input.form-control(name='author',type='text')
+    #form-group
+      label Salary:
+      input.form-control(name='salary',type='text')
+    #form-group
+      label Skills:
+      input.form-control(name='skill',type='text')    
+    #form-group
+      label Description:
+      textarea.form-control(name='body')
+    br
+    input.btn.btn-primary(type='submit',value='Submit')
+      
+      
+    
+  
